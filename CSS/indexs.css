@@ -1,0 +1,449 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+
+}
+
+/* Navigation Bar */
+#navbar{
+        display: flex;
+        align-items: center;
+    position: relative;
+    top: 0;
+    
+    
+}
+
+/* Logo and Image */
+.logo{
+    margin: 0px;
+}
+.logo img{
+    height: 80px;
+    margin: 10px 10px;
+    border-radius: 100px;
+    filter: invert(100%);
+    animation-name: image;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes image{
+    0%{
+        filter: invert(100%);
+        border-radius: 17% 83% 59% 41% / 30% 27% 73% 70% ;
+    }
+    50%{
+        filter: invert(0%);
+        border-radius: 100%;
+    }
+    100%{
+        filter: invert(100%);
+        border-radius:75% 25% 25% 75% / 30% 30% 70% 70%; 
+    }
+}
+
+/* Navigation Bar List Styling */
+#navbar ul{
+    display: flex;
+    font-family: "Signika Negative", sans-serif;
+    
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.90;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.8em;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 30px;
+    margin: 4px;
+    border-radius: 20px;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.212);
+    transition: all ease-in-out;
+    transition-duration: 0.50s;
+    
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    transform: translateY(12px);
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 430px;
+    padding: 3px 200px;
+    align-items: center;
+    justify-content: center;
+}
+#home::before{
+    content: "";
+    background: url('../IMG/renziliu-fun-F808kqR22qQ-unsplash.jpg')no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 81%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.90;
+}
+#home h1{
+    color: rgb(0,0,0);
+    text-align: center;
+    font-family: "Signika Negative", sans-serif;
+}
+#home .p11{
+    color: rgb(0,0,0);
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Margarine", sans-serif;
+
+}
+
+
+/* Services section */
+#services{
+    margin: 30px;
+    display: flex;
+}
+#services .box{
+    padding: 20px;
+
+    margin: 6px 10px;
+    border: 2px solid black;
+    border-radius: 23px;
+    background-color: rgba(0, 0, 0, 0.137);
+    animation: box;
+    animation: box 0.90s ease-in-out infinite alternate-reverse;
+}
+
+#services .box img{
+    height: 170px;
+    display: block;
+    margin: auto;
+    animation: box1 6s ease-in-out 1 alternate-reverse;
+    transition: all ease-in;
+    transition-duration: 0.50s;
+}
+#services .box img:hover{
+    cursor: pointer;
+    transform: scale(1.16);
+}
+#services .box p{
+    font-family: "Signika Negative", sans-serif;
+}
+/* .services-container::before{
+    content: "";
+    position: absolute;
+    background: url('../IMG/pexels-photo-1052691p') no-repeat center center/cover;
+    width: 100%;
+    height: 110%;
+    z-index: -1;
+    opacity: 0.90;
+} */
+ #ourservices{
+    background-color: rgba(49, 83, 72, 0.199);
+    color: rgb(0, 0, 0);
+    padding: 0%;
+    border-radius: 100px;
+    border: 1px solid black;
+    backdrop-filter: blur(10px);
+    animation: ourservices 3s ease-in-out infinite alternate-reverse;
+ }
+
+ /* Our Clients  */
+ #clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+ #ourclients{
+    background-color: rgba(49, 83, 72, 0.199);
+    color: rgb(0, 0, 0);
+    padding: 0%;
+    border-radius: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    animation: ourclients 3s ease-in-out infinite alternate-reverse;
+ }
+
+@keyframes ourclients{
+    0%{
+        transform: translateY(-35%);
+        opacity: 1;
+    }
+    50%{
+        transform: translatey(0%);
+        opacity: 0;
+    }
+    80%{
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+}
+
+ .client-item img{
+    height: 120px;
+    padding: 6px;
+    margin: 6px 10px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    animation: clientimg 3s ease-in-out infinite alternate-reverse;
+    transition: all ease-in;
+    transition-duration: 0.50s;
+ }
+ @keyframes clientimg{
+    0%{
+        transform: scale(0.7);
+        opacity: 0.90;
+        border-radius: 100px;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 12px;
+    }
+ }
+ .client-item img:hover{
+    transform: scale(1.4);
+ }
+ /* #client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../IMG/herb-spices-cooking-background_136595-562.avif') no-repeat center center/cover;
+    width: 100%;
+    height: 40%;
+    z-index: -1;
+    opacity: 0.90;
+ } */
+
+/* Contact Us Section */
+
+#Contact{
+    position: relative;
+}
+
+#Contact::before{
+    content: "";
+    position: absolute;
+    background: url('../IMG/herb-spices-cooking-background_136595-562.avif') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+
+}
+#Contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:25px;
+}
+#Contact-box input,
+#Contact-box textarea{
+    width: 100%;
+    padding:10px;
+    margin: 2px auto;
+    border-radius: 10px;
+    border: 2px solid green ;
+    transition-duration: 0.90s;
+}
+#Contact-box input::placeholder,
+#Contact-box textarea::placeholder,
+#Contact-box select option{
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+#Contact-box select option{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+#Contact-box input,
+#Contact-box textarea:focus{
+    outline: none;
+    border: 2px solid green;
+  
+}
+#Contact-box input:hover,
+#Contact-box textarea:hover{
+    transform: scale(1.1);
+  
+}
+#Contact-box select{
+    border: 2px solid green;
+}
+#Contact-box select:focus{
+    content: none;
+    border: 2px solid green;
+}
+
+
+#Contact-box select {
+    width: 104.5%;
+    padding:10px;
+    margin: 2px auto;
+    border-radius: 10px;
+}
+#Contact-box form{
+    width: 40%;
+    
+}
+#Contact-box label{
+    font-size: 1.3rem;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: bold;
+
+}
+#contactus{
+    background-color: rgba(49, 83, 72, 0.199);
+    color: rgb(0, 0, 0);
+    padding: 0%;
+    border-radius: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    animation: ourclients 3s ease-in-out infinite alternate-reverse;
+}
+
+/* footer section  */
+footer{
+    background: black;
+    color: white;
+    padding: 12px 20px;
+
+}
+/* All Text and Header Class */
+.h-primary{
+    font-family: "Signika Negative", sans-serif;
+    font-size: 3.2rem;
+    padding: 13px;
+}
+.h-secondary{
+    font-family: "Signika Negative", sans-serif;
+    font-size: 1.8rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    color: black;
+    margin: 17px;
+    background-color: rgb(250, 235, 215);
+    font-size: 1.2rem;
+    animation: btn 2s ease-in-out infinite alternate;
+    cursor: pointer;
+    transition: all ease-in-out;
+    transition-duration: 0.70s;
+}
+.btn:hover{
+    transform: scale(1.1);
+    background-color: rgb(68, 185, 150);
+    border: 2px solid black;
+    color: white;
+}
+.center,.p11{
+    text-align: center;
+}
+
+/* Filter Invert */
+.BeChill{
+    filter: invert(10%);
+}
+.RemoveHunger{
+    filter: invert(13%);
+}
+
+/* Keyframe */
+@keyframes box {
+    100%{
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.04);
+
+    }
+   
+}
+@keyframes box1 {
+    100%{
+        transform: translatey(150%);
+        opacity: 0;
+    
+}
+0%{
+    transform: scale(1.04);
+    opacity: 1;
+}
+}
+@keyframes ourservices {
+    0%{
+        transform: translateY(-20px);
+        opacity: 1;
+        }
+    50%{
+        transform: translateY(0px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    /* 100%{
+        transform: translatey(20%);
+        opacity: 0;
+    
+}
+0%{
+    transform: translateY(0);
+    opacity: 1;
+}
+100%{
+    transform: translateY(-20%);
+    opacity: 0;
+} */
+}
+@keyframes btn {
+    0%{
+        transform: translateX(-10%);
+        opacity: 1;
+    
+}
+50%{
+    transform: translateX(0%);
+    opacity: 1;
+}
+100%{
+    transform: translateX(10%);
+    opacity: 1;
+}
+}
